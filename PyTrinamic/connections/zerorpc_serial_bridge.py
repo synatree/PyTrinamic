@@ -18,3 +18,12 @@ class zerorpc_serial_bridge(serial_tmcl_interface):
             self.server.run()
     def setModuleAddress(self,moduleAddress):
        self.moduleAddress = moduleAddress
+
+    def sanityCheck(self):
+        self.enableDebug(1)
+        self.moduleAddress = 2
+        return [
+            self.axisParameter(206,1),
+            self.axisParameter(0,1),
+            self.axisParameter(1,1)
+        ]
