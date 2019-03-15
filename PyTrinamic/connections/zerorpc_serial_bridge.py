@@ -16,5 +16,5 @@ class zerorpc_serial_bridge(serial_tmcl_interface):
             self.server = zerorpc.Server(self)
             self.server.bind(bindString)
             self.server.run()
-   def setModuleAddress(self,moduleAddress):
+    def setModuleAddress(self,moduleAddress):
        self.moduleAddress = moduleAddress
